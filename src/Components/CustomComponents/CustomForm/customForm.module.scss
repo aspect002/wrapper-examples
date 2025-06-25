@@ -1,0 +1,97 @@
+.form-container {
+  width: 100%;
+  position: relative;
+
+  :global(.ant-form) {
+    :global(h2.ant-typography) {
+      font-size: 28px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 150%;
+      margin-bottom: 10px;
+    }
+
+    :global(div.ant-typography) {
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 150%;
+      margin-bottom: 40px;
+    }
+
+    :global(.ant-form-item) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    :global(.ant-row) {
+      flex-direction: column;
+      display: flex;
+      margin-bottom: 60px;
+      gap: 10px;
+    }
+
+    :global(.ant-form-item-label) {
+      font-size: 14px;
+      display: flex;
+      --ant-form-label-colon-margin-inline-start: 0px;
+      --ant-form-label-colon-margin-inline-end: 0px;
+      --ant-form-label-height: none;
+      --ant-form-label-required-mark-color: black;
+    }
+
+    :global(.ant-form-item-label > label) {
+      align-items: flex-start;
+    }
+
+    :global(.ant-form-item-label > label.ant-form-item-required::before) {
+      margin-left: 4px;
+    }
+
+    :global(.ant-form-item-required) {
+      flex-direction: row-reverse;
+    }
+
+    :global(.ant-input) {
+      padding: 16px 18px;
+      border-color: black;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    :global(.ant-input::placeholder) {
+      color: black;
+    }
+
+    :global(#message.ant-input) {
+      min-height: 160px;
+      resize: none;
+    }
+
+    :global(.ant-btn) {
+      position: absolute;
+      bottom: -90px;
+      right: 20px;
+      padding: 12px 30px;
+      border-radius: 50px;
+      color: black;
+      background-color: white;
+      border-color: rgb(0, 0, 0);
+
+      &:focus {
+        background-color: white;
+        border-color: rgb(0, 0, 0);
+        box-shadow: none;
+        outline: none;
+      }
+
+      &:hover {
+        background-color: white;
+        border-color: rgb(0, 0, 0);
+        color: black;
+      }
+    }
+  }
+}
