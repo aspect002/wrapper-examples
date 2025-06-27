@@ -1,0 +1,28 @@
+.name-container :global(.ant-form-item) {
+  display: flex;
+  flex-direction: column;
+}
+
+:global(.ant-row) {
+  flex-direction: column;
+  display: flex;
+  margin-bottom: 60px;
+  gap: 10px;
+}
+
+:global(.ant-form-item-label) {
+  font-size: 14px;
+  display: flex;
+  --ant-form-label-colon-margin-inline-start: 0px;
+  --ant-form-label-colon-margin-inline-end: 0px;
+  --ant-form-label-height: none;
+  --ant-form-label-required-mark-color: black;
+}
+
+:global(.ant-form-item-label > label.ant-form-item-required::before) {
+  margin-left: 4px;
+}
+
+:global(.ant-form-item-required) {
+  flex-direction: row-reverse;
+}

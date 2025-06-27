@@ -1,0 +1,17 @@
+.input-container :global(.ant-input) {
+  padding: 16px 18px;
+  border-color: black;
+
+  &:focus {
+    border-color: black;
+    box-shadow: none;
+  }
+
+  :global(.ant-input::placeholder) {
+    color: black;
+  }
+}
+
+:global(.ant-input:hover) {
+  border-color: black;
+}

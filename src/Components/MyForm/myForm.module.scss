@@ -1,5 +1,7 @@
-.nameEmail {
+.nameInput {
   display: flex;
-  gap: 10px;
+  gap: 40px;
 }
-
+.nameInput > * {
+  flex: 1;
+}

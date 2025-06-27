@@ -1,0 +1,10 @@
+.text-area-container :global(#message.ant-input) {
+  min-height: 160px;
+  resize: none;
+  border-color: black;
+
+  &:focus {
+    border-color: black;
+    box-shadow: none;
+  }
+}

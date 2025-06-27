@@ -1,10 +1,14 @@
 "use client";
-import { Form as AntdForm, Button, Input } from "antd";
 import { CustomForm } from "../CustomComponents";
 import styles from "./myForm.module.scss";
-import { Typography } from "antd";
-
-const { Title, Paragraph } = Typography;
+import {
+  Name,
+  CustomInput,
+  CustomTitle,
+  CustomParagraph,
+  CustomTextArea,
+  CustomButton,
+} from "../CustomComponents";
 
 const MyForm = () => {
   const onFinish = (values: any) => {
@@ -13,48 +17,34 @@ const MyForm = () => {
 
   return (
     <CustomForm onFinish={onFinish}>
-      <Title level={2}>GET IN TOUCH </Title>
-      <Paragraph>We are here to answer any question you may have.</Paragraph>
+      <CustomTitle level={2}>GET IN TOUCH</CustomTitle>
+      <CustomParagraph>
+        We are here to answer any question you may have.
+      </CustomParagraph>
+      <div className={styles.nameInput}>
+        <Name label="NAME" name="name" rules={[{ required: true }]}>
+          <CustomInput placeholder="Enter your name" autoComplete="name" />
+        </Name>
 
-      <div className={styles.nameEmail}>
-        <AntdForm.Item
-          label="NAME"
-          name="name"
-          rules={[{ required: true }]}
-          colon={false}
-        >
-          <Input placeholder="Enter your name" />
-        </AntdForm.Item>
-        <AntdForm.Item
-          label="EMAIL ADDRESS"
-          name="email"
-          rules={[{ required: true }]}
-          colon={false}
-        >
-          <Input placeholder="Enter your email" />
-        </AntdForm.Item>
+        <Name label="EMAIL ADDRESS" name="email" rules={[{ required: true }]}>
+          <CustomInput placeholder="Enter your email" autoComplete="email" />
+        </Name>
       </div>
+      <Name label="SUBJECT" name="subject" rules={[{ required: true }]}>
+        <CustomInput
+          placeholder="Request for property information"
+          autoComplete="off"
+        />
+      </Name>
 
-      <AntdForm.Item
-        label="SUBJECT"
-        name="Subject"
-        rules={[{ required: true }]}
-        colon={false}
-      >
-        <Input placeholder="Request for property information" />
-      </AntdForm.Item>
+      <Name label="MESSAGE" name="message" rules={[{ required: true }]}>
+        <CustomTextArea
+          placeholder="Please enter a detailed description of your inquiry..."
+          autoComplete="off"
+        />
+      </Name>
 
-      <AntdForm.Item
-        label="MESSAGE"
-        name="message"
-        rules={[{ required: true }]}
-        colon={false}
-      >
-        <Input.TextArea placeholder="Please enter a detailed description of your inquiry..." />
-      </AntdForm.Item>
-      <AntdForm.Item>
-        <Button type="primary">Submit now</Button>
-      </AntdForm.Item>
+      <CustomButton type="primary">Submit now</CustomButton>
     </CustomForm>
   );
 };
