@@ -7,7 +7,6 @@ import styles from "./customButton.module.scss";
 
 interface CustomButtonProps extends ButtonProps {
   containerClassName?: string;
-  className?: string;
 }
 
 export const CustomButton: React.FC<CustomButtonProps> = ({

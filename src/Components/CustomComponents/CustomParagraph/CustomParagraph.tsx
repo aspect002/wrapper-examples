@@ -16,7 +16,7 @@ export const CustomParagraph: React.FC<
     <div
       className={classNames(styles["paragraph-container"], containerClassName)}
     >
-      <Paragraph className={className} {...props} />
+      <Paragraph {...props} className={className} />
     </div>
   );
 };

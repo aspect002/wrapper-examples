@@ -14,7 +14,7 @@ export const CustomTitle: React.FC<
 > = ({ containerClassName, className, ...props }) => {
   return (
     <div className={classNames(styles["title-container"], containerClassName)}>
-      <Title className={className} {...props} />
+      <Title {...props} className={className} />
     </div>
   );
 };

@@ -22,7 +22,9 @@
 :global(.ant-form-item-label > label.ant-form-item-required::before) {
   margin-left: 4px;
 }
-
+:global(.ant-form-item-label > label.ant-form-item-required::after) {
+  content: none; 
+}
 :global(.ant-form-item-required) {
   flex-direction: row-reverse;
 }

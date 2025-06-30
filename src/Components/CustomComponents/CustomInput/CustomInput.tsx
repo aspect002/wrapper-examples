@@ -8,7 +8,6 @@ import styles from "./customInput.module.scss";
 
 interface CustomInputProps extends InputProps {
   containerClassName?: string;
-  className?: string;
 }
 
 export const CustomInput: React.FC<CustomInputProps> = ({
@@ -18,7 +17,7 @@ export const CustomInput: React.FC<CustomInputProps> = ({
 }) => {
   return (
     <div className={classNames(styles["input-container"], containerClassName)}>
-      <AntdInput className={className} {...props} />
+      <AntdInput {...props} className={className} />
     </div>
   );
 };
