@@ -17,10 +17,16 @@ const MyForm = () => {
 
   return (
     <CustomForm onFinish={onFinish}>
-      <CustomTitle level={2}>GET IN TOUCH</CustomTitle>
-      <CustomParagraph>
-        We are here to answer any question you may have.
-      </CustomParagraph>
+      <div className={styles.titlePosition}>
+        <CustomTitle level={2}>GET IN TOUCH</CustomTitle>
+      </div>
+
+      <div className={styles.paragraphPosition}>
+        <CustomParagraph>
+          We are here to answer any question you may have.
+        </CustomParagraph>
+      </div>
+
       <div className={styles.nameInput}>
         <Name
           name="name"
@@ -67,8 +73,9 @@ const MyForm = () => {
           autoComplete="off"
         />
       </Name>
-
-      <CustomButton type="primary">Submit now</CustomButton>
+      <div className={styles.buttonPosition}>
+        <CustomButton type="primary">Submit now</CustomButton>
+      </div>
     </CustomForm>
   );
 };

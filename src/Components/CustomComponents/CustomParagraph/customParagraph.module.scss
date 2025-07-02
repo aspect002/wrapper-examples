@@ -1,9 +1,6 @@
 .wrapper-container .paragraph-container {
   --ant-font-size: 16px;
   --ant-font-family: Arial, Helvetica, sans-serif;
-  --ant-font-weight: 600; //cпросить почему в дт показывает как рабочее но не переопределяется
+  --ant-font-weight: 600;
   --ant-line-height: 1.5;
-  margin-bottom: 40px;
-  // div:where(.css-dev-only-do-not-override-r761ll).ant-typography, :where(.css-dev-only-do-not-override-r761ll).ant-typography p {
-  //   margin-bottom: 1em; тут тоже спросить, если делать через --ant-typography-title-margin-bottom: 0.5em; То не переопределяется
 }

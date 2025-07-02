@@ -1,12 +1,7 @@
 .wrapper-container .button-container {
-  position: absolute;
-  bottom: -30px;
-  right: 20px;
   --ant-button-padding-inline: 30px;
   --ant-border-radius: 50px;
-  --ant-color-primary-active:white;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  --ant-color-primary-active: white;
   --ant-button-primary-color: black;
   --ant-color-primary: white;
   --ant-color-primary-hover: white;
@@ -16,8 +11,3 @@
   border-bottom-color: var(--ant-border-color);
   border-left-color: var(--ant-border-color);
 }
-
-// --ant-button-padding-block: 12px;почему-то это переопределение не работает
-//  -ant-button-padding-block-sm: 12px;
-// --ant-button-padding-block-lg: 12px;
-

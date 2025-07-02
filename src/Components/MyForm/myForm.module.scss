@@ -5,3 +5,16 @@
 .nameInput > * {
   flex: 1;
 }
+
+.buttonPosition {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.paragraphPosition {
+  margin-bottom: 40px;
+}
+
+.titlePosition {
+  margin-bottom: 10px;
+}
