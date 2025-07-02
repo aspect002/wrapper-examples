@@ -17,8 +17,9 @@ export const CustomTextArea: React.FC<CustomTextAreaProps> = ({
 }) => {
   return (
     <div
-      className={classNames(styles["text-area-container"], containerClassName)}>
-      <Input.TextArea {...props} className={className} />
+      className={classNames(styles["wrapper-container"], containerClassName)}>
+      <Input.TextArea className={classNames(styles["text-area-container"], className)}
+        {...props}/>
     </div>
   );
 };

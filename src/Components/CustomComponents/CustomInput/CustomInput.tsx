@@ -16,8 +16,13 @@ export const CustomInput: React.FC<CustomInputProps> = ({
   ...props
 }) => {
   return (
-    <div className={classNames(styles["input-container"], containerClassName)}>
-      <AntdInput {...props} className={className} />
+    <div
+      className={classNames(styles["wrapper-container"], containerClassName)}
+    >
+      <AntdInput
+        className={classNames(styles["input-container"], className)}
+        {...props}
+      />
     </div>
   );
 };

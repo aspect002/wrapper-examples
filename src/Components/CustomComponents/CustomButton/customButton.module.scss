@@ -1,18 +1,23 @@
-.button-container :global(.ant-btn.ant-btn-variant-solid) {
+.wrapper-container .button-container {
   position: absolute;
-  bottom: -90px;
+  bottom: -30px;
   right: 20px;
-  padding: 12px 30px;
-  border-radius: 50px;
-  color: black;
-  background-color: white;
-  border-color: black;
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: white;
-    border-color: black;
-    color: black;
-    box-shadow: none;
-  }
+  --ant-button-padding-inline: 30px;
+  --ant-border-radius: 50px;
+  --ant-color-primary-active:white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  --ant-button-primary-color: black;
+  --ant-color-primary: white;
+  --ant-color-primary-hover: white;
+  --ant-border-color: #000;
+  border-top-color: var(--ant-border-color);
+  border-right-color: var(--ant-border-color);
+  border-bottom-color: var(--ant-border-color);
+  border-left-color: var(--ant-border-color);
 }
+
+// --ant-button-padding-block: 12px;почему-то это переопределение не работает
+//  -ant-button-padding-block-sm: 12px;
+// --ant-button-padding-block-lg: 12px;
+

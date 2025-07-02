@@ -13,8 +13,13 @@ export const CustomTitle: React.FC<
   React.PropsWithChildren<CustomTitleProps>
 > = ({ containerClassName, className, ...props }) => {
   return (
-    <div className={classNames(styles["title-container"], containerClassName)}>
-      <Title {...props} className={className} />
+    <div
+      className={classNames(styles["wrapper-container"], containerClassName)}
+    >
+      <Title
+        className={classNames(styles["title-container"], className)}
+        {...props}
+      />
     </div>
   );
 };

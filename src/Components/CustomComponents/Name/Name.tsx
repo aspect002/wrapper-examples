@@ -16,8 +16,13 @@ export const Name: React.FC<React.PropsWithChildren<NameProps>> = ({
   ...props
 }) => {
   return (
-    <div className={classNames(styles["name-container"], containerClassName)}>
-      <AntdForm.Item {...props} className={className} />
+    <div
+      className={classNames(styles["wrapper-container"], containerClassName)}
+    >
+      <AntdForm.Item
+        className={classNames(styles["name-container"], className)}
+        {...props}
+      />
     </div>
   );
 };
