@@ -9,6 +9,7 @@ import {
   CustomTextArea,
   CustomButton,
 } from "../CustomComponents";
+import { Flex } from "antd";
 
 const MyForm = () => {
   const onFinish = (values: any) => {
@@ -27,7 +28,7 @@ const MyForm = () => {
         </CustomParagraph>
       </div>
 
-      <div className={styles.nameInput}>
+      <Flex className={styles.nameInput}>
         <Name
           name="name"
           rules={[{ required: true }]}
@@ -47,7 +48,7 @@ const MyForm = () => {
         >
           <CustomInput placeholder="Enter your email" autoComplete="email" />
         </Name>
-      </div>
+      </Flex>
       <Name
         name="subject"
         rules={[{ required: true }]}
@@ -73,9 +74,9 @@ const MyForm = () => {
           autoComplete="off"
         />
       </Name>
-      <div className={styles.buttonPosition}>
+      <Flex justify="flex-end" align="center">
         <CustomButton type="primary">Submit now</CustomButton>
-      </div>
+      </Flex>
     </CustomForm>
   );
 };
