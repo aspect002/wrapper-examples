@@ -9,6 +9,7 @@ import {
   CustomTextArea,
   CustomButton,
 } from "../CustomComponents";
+import { Flex } from "antd";
 
 const MyForm = () => {
   const onFinish = (values: any) => {
@@ -17,34 +18,65 @@ const MyForm = () => {
 
   return (
     <CustomForm onFinish={onFinish}>
-      <CustomTitle level={2}>GET IN TOUCH</CustomTitle>
-      <CustomParagraph>
-        We are here to answer any question you may have.
-      </CustomParagraph>
-      <div className={styles.nameInput}>
-        <Name label="NAME" name="name" rules={[{ required: true }]}>
+      <div className={styles.titlePosition}>
+        <CustomTitle level={2}>GET IN TOUCH</CustomTitle>
+      </div>
+
+      <div className={styles.paragraphPosition}>
+        <CustomParagraph>
+          We are here to answer any question you may have.
+        </CustomParagraph>
+      </div>
+
+      <Flex className={styles.nameInput}>
+        <Name
+          name="name"
+          rules={[{ required: true }]}
+          label="NAME"
+          labelCol={{ span: 24 }}
+          wrapperCol={{ span: 24 }}
+        >
           <CustomInput placeholder="Enter your name" autoComplete="name" />
         </Name>
 
-        <Name label="EMAIL ADDRESS" name="email" rules={[{ required: true }]}>
+        <Name
+          name="email"
+          rules={[{ required: true }]}
+          label="EMAIL ADDRESS"
+          labelCol={{ span: 24 }}
+          wrapperCol={{ span: 24 }}
+        >
           <CustomInput placeholder="Enter your email" autoComplete="email" />
         </Name>
-      </div>
-      <Name label="SUBJECT" name="subject" rules={[{ required: true }]}>
+      </Flex>
+      <Name
+        name="subject"
+        rules={[{ required: true }]}
+        label="SUBJECT"
+        labelCol={{ span: 24 }}
+        wrapperCol={{ span: 24 }}
+      >
         <CustomInput
           placeholder="Request for property information"
           autoComplete="off"
         />
       </Name>
 
-      <Name label="MESSAGE" name="message" rules={[{ required: true }]}>
+      <Name
+        name="message"
+        rules={[{ required: true }]}
+        label="MESSAGE"
+        labelCol={{ span: 24 }}
+        wrapperCol={{ span: 24 }}
+      >
         <CustomTextArea
           placeholder="Please enter a detailed description of your inquiry..."
           autoComplete="off"
         />
       </Name>
-
-      <CustomButton type="primary">Submit now</CustomButton>
+      <Flex justify="flex-end" align="center">
+        <CustomButton type="primary">Submit now</CustomButton>
+      </Flex>
     </CustomForm>
   );
 };

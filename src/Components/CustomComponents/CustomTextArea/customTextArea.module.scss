@@ -1,10 +1,10 @@
-.text-area-container :global(#message.ant-input) {
-  min-height: 160px;
+.wrapper-container .text-area-container{
+  --ant-control-height: 160px;
+  --ant-color-border:black
+  --ant-input-border-color:black;
+  --ant-input-active-border-color:black;
+  --ant-input-hover-border-color:black;
+  --ant-color-text-placeholder:black;
+  --ant-input-active-shadow:none;
   resize: none;
-  border-color: black;
-
-  &:focus {
-    border-color: black;
-    box-shadow: none;
-  }
 }

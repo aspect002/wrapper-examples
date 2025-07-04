@@ -15,8 +15,13 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
   ...props
 }) => {
   return (
-    <div className={classNames(styles["button-container"], containerClassName)}>
-      <Button {...props} className={className} />
+    <div
+      className={classNames(styles["wrapper-container"], containerClassName)}
+    >
+      <Button
+        className={classNames(styles["button-container"], className)}
+        {...props}
+      />
     </div>
   );
 };

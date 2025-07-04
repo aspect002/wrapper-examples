@@ -1,7 +1,14 @@
 .nameInput {
-  display: flex;
   gap: 40px;
 }
 .nameInput > * {
   flex: 1;
+}
+
+.paragraphPosition {
+  margin-bottom: 40px;
+}
+
+.titlePosition {
+  margin-bottom: 10px;
 }

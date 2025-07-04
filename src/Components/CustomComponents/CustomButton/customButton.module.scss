@@ -1,18 +1,13 @@
-.button-container :global(.ant-btn.ant-btn-variant-solid) {
-  position: absolute;
-  bottom: -90px;
-  right: 20px;
-  padding: 12px 30px;
-  border-radius: 50px;
-  color: black;
-  background-color: white;
-  border-color: black;
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: white;
-    border-color: black;
-    color: black;
-    box-shadow: none;
-  }
+.wrapper-container .button-container {
+  --ant-button-padding-inline: 30px;
+  --ant-border-radius: 50px;
+  --ant-color-primary-active: white;
+  --ant-button-primary-color: black;
+  --ant-color-primary: white;
+  --ant-color-primary-hover: white;
+  --ant-border-color: #000;
+  border-top-color: var(--ant-border-color);
+  border-right-color: var(--ant-border-color);
+  border-bottom-color: var(--ant-border-color);
+  border-left-color: var(--ant-border-color);
 }

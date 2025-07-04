@@ -1,17 +1,10 @@
-.input-container :global(.ant-input) {
-  padding: 16px 18px;
-  border-color: black;
-
-  &:focus {
-    border-color: black;
-    box-shadow: none;
-  }
-
-  :global(.ant-input::placeholder) {
-    color: black;
-  }
-}
-
-:global(.ant-input:hover) {
-  border-color: black;
+.wrapper-container .input-container {
+  --ant-input-padding-block: 16px;
+  --ant-input-padding-inline: 18px;
+  --ant-input-border-color: black;
+  --ant-input-active-border-color: black;
+  --ant-input-hover-border-color: black;
+  --ant-input-active-shadow: none;
+  --ant-color-border: black;
+  --ant-color-text-placeholder: black;
 }
