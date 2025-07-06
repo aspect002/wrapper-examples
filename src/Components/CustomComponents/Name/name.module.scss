@@ -1,9 +1,9 @@
 .wrapper-container .name-container {
   --ant-form-label-colon-margin-inline-start: 0px;
   --ant-form-label-colon-margin-inline-end: 0px;
-  --ant-form-label-height: none;
+  //   --ant-form-label-height: none;
   --ant-form-label-required-mark-color: black;
-  --ant-form-label-font-size: 14px;
+  //   --ant-form-label-font-size: 14px;
 }
 
 :global(.ant-form-item-label > label.ant-form-item-required::before) {

@@ -1,10 +1,10 @@
 import React from "react";
-import { Typography, theme } from "antd";
+import { Typography } from "antd";
 import classNames from "classnames";
 import styles from "./customTitle.module.scss";
+import { titleToken } from "../../../themeTokens";
 
 const { Title } = Typography;
-const { useToken } = theme;
 
 interface CustomTitleProps extends React.ComponentProps<typeof Title> {
   containerClassName?: string;
@@ -15,8 +15,6 @@ export const CustomTitle: React.FC<CustomTitleProps> = ({
   className,
   ...props
 }) => {
-  const { token } = useToken();
-
   return (
     <div
       className={classNames(styles["wrapper-container"], containerClassName)}
@@ -24,10 +22,10 @@ export const CustomTitle: React.FC<CustomTitleProps> = ({
       <Title
         className={classNames(styles["title-container"], className)}
         style={{
-          fontSize: token.fontSizeHeading2,
-          fontFamily: token.fontFamily,
-          fontWeight: token.fontWeightStrong,
-          lineHeight: token.lineHeightHeading2,
+          fontSize: titleToken.fontSizeHeading2,
+          fontFamily: titleToken.fontFamily,
+          fontWeight: titleToken.fontWeightStrong,
+          lineHeight: titleToken.lineHeightHeading2,
         }}
         {...props}
       />

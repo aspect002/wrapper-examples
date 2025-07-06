@@ -1,10 +1,24 @@
-.wrapper-container .input-container {
-  --ant-input-padding-block: 16px;
-  --ant-input-padding-inline: 18px;
-  --ant-input-border-color: black;
-  --ant-input-active-border-color: black;
-  --ant-input-hover-border-color: black;
-  --ant-input-active-shadow: none;
-  --ant-color-border: black;
-  --ant-color-text-placeholder: black;
+// .wrapper-container .input-container {
+//   --ant-input-padding-block: 16px;
+//   --ant-input-padding-inline: 18px;
+//   --ant-input-border-color: black;
+//   --ant-input-active-border-color: black;
+//   --ant-input-hover-border-color: black;
+//   --ant-input-active-shadow: none;
+//   --ant-color-border: black;
+//   --ant-color-text-placeholder: black;
+// }
+.input-container {
+  &::placeholder {
+    color: var(--text-area-placeholder-color);
+  }
+
+  &:focus {
+    border-color: var(--text-area-focus-border-color);
+    outline: none;
+  }
+
+  &:hover {
+    border-color: var(--text-area-hover-border-color);
+  }
 }
